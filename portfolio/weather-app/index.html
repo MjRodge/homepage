@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FreeCodeCamp: Local Weather</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/websygen/owfont/d7c52f6b/css/owfont-regular.css">
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyD1leTyq2gBnI3ZaJ7oe7miTat9HYl3lAE"></script>
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <script src="weather-app.js"></script>
+    <link rel="stylesheet" href="weather-app.css">
+  </head>
+  <body>
+    <div id="mapBackground" class="container-fluid"></div>
+    <div id="weatherContainer" class="container-fluid">
+      <div id="location"></div>
+      <hr/>
+      <div id="icon"></div>
+      <div id="description"></div>
+      <div id="currentTemp"></div>
+      <div id="switch">
+        <label class="switch">
+          <input type="checkbox" id="unitSwitch">
+          <span class="slider round"></span>
+        </label>
+        <p>&deg;C/&deg;F</p>
+      </div>
+    </div>
+  </body>
+</html>

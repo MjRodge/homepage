@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Michael J. Rodgers: Web Developer</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109254524-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-109254524-1');
+    </script>
+    <!-- end of google analytics -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/websygen/owfont/d7c52f6b/css/owfont-regular.css">
+    <script src="https://use.fontawesome.com/87871c3e18.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Advent+Pro:200|Roboto+Condensed" rel="stylesheet"
+
+    <!-- weather project resources -->
+      <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyD1leTyq2gBnI3ZaJ7oe7miTat9HYl3lAE"></script>
+      <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+      <script src="/portfolio/weather-app/weather-app.js"></script>
+      <link rel="stylesheet" href="/portfolio/weather-app/weather-app.css">
+    <!-- end of weather project resources -->
+
+    <!-- wikipedia viewer project resources -->
+      <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="/portfolio/wikipedia-viewer/wikipedia-viewer.css">
+      <script src="/portfolio/wikipedia-viewer/wikipedia-viewer.js"></script>
+    <!-- end of wikipedia viewer project resources -->
+
+    <!-- quote project resources -->
+      <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="/portfolio/random-quote/random-quote.css">
+      <script src="/portfolio/random-quote/random-quote.js"></script>
+    <!-- end of quote project resources -->
+
+    <!-- snake project resources -->
+      <link rel="stylesheet" type="text/css" href="/portfolio/snake/snake.css">
+      <script src="/portfolio/snake/snake.js"></script>
+    <!-- end of snake project resources -->
+
+    <!-- fullPage.js initialisation -->
+      <link rel="stylesheet" type="text/css" href="fullPage.js-master/jquery.fullPage.css" />
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <!-- This following line is optional. Only necessary if you use the option css3:false and you want to use other easing effects rather than "linear", "swing" or "easeInOutCubic". -->
+      <script src="fullPage.js-master/vendors/jquery.easings.min.js"></script>
+      <!-- This following line is only necessary in the case of using the option `scrollOverflow:true` -->
+      <script type="text/javascript" src="fullPage.js-master/vendors/scrolloverflow.min.js"></script>
+      <script type="text/javascript" src="fullPage.js-master/jquery.fullPage.js"></script>
+    <!-- end of fullPage.js initialisation -->
+
+    <link rel="stylesheet" type="text/css" href="css/homepage.css" />
+    <script src="js/homepage.js"></script>
+
+  </head>
+
+  <body>
+    <div id="navbar">
+      <ul id="navList">
+        <li><button id="home-nav" class="nav-button name-nav">Michael J. Rodgers</button></li>
+        <li><button id="portfolio-nav" class="nav-button nav-item">PORTFOLIO</button></li>
+        <li><button id="contact-nav" class="nav-button nav-item">CONTACT</button></li>
+        <li><button class="nav-button nav-item social-media">
+          <i class="fa fa-linkedin-square fa-2" aria-hidden="true"></i></button></li>
+        <li><button class="nav-button nav-item social-media">
+          <i class="fa fa-github-square fa-2" aria-hidden="true"></i></button></li>
+        <!-- will be countdown timer page nav
+        <li data-menuanchor="about"><a href="#about">About</a></li>
+        -->
+      </ul>
+    </div>
+
+    <!-- main content section using fullPage.js to simulate slides -->
+    <div id="fullpage">
+      <!-- home section styling -->
+      <div class="section">
+        <div class="landing-bg">
+          <!-- random background image for landing page with gradient -->
+        <div class="landing-headline">
+          <h1 class="headline-title">Michael J. Rodgers</h1>
+          <hr class="headline-hr" />
+          <h3 class="headline-sub">Front-End Web Developer</h3>
+        </div>
+        </div>
+      </div>
+      <!-- end of home section styling -->
+
+      <!-- will be countdown timer page
+      <div class="section" style="background-color:white">Some section</div>
+      -->
+
+      <!-- Portfolio page markup -->
+      <div class="section">
+        <!-- quote project markup -->
+          <div class="quote-background container-fluid">
+            <div class="container-fluid quote-box">
+              <div class="row">
+                <div class="col quote-primary">
+                  <p class="quote"></p>
+                </div>
+              </div>
+              <div class="row text-center">
+                <div class="col">
+                  <button id="getQuote" class="btn-lg btn-success fa fa-refresh"></button>
+                  <button id="tweetQuote" class="btn-lg btn-info fa fa-twitter"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- end of quote project markup -->
+      </div>
+
+      <div class="section">
+        <!-- weather project markup -->
+          <div id="weather-map-background" class="container-fluid"></div>
+          <div id="weather-container" class="container-fluid">
+            <div id="weather-location"></div>
+            <hr/>
+            <div id="weather-icon"></div>
+            <div id="weather-description"></div>
+            <div id="weather-current-temp"></div>
+            <div id="weather-switch">
+              <label class="weather-switch-label">
+                <input type="checkbox" id="weather-unit-switch">
+                <span class="weather-slider weather-round"></span>
+              </label>
+              <p>&deg;C/&deg;F</p>
+            </div>
+          </div>
+        <!-- end of weather project markup -->
+      </div>
+
+      <div class="section wiki">
+        <!-- wikipedia viewer project markup -->
+          <div id="wiki-main" class="container-fluid">
+            <div id="wiki-search">
+              <p class="wiki-secondary">Click for <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank" class="wiki-accent">random</a> WikiPedia entry</p>
+              <div id="wiki-search-box">
+                <form id="wiki-search">
+                  <input type="text" id="wiki-input" autocomplete="off">
+                  <i class="fa fa-search" id="wiki-submit-button"></i>
+                </form>
+              </div>
+            </div>
+
+            <div id="wiki-results">
+              <!-- JavaScript will populate div with links to articles once search terms have been entered-->
+            </div>
+          </div>
+        <!-- end of wikipedia viewer project markup -->
+      </div>
+
+      <div class="section" style="background-color:pink">
+        <!-- start of snake project markup -->
+          <div id="snake-main">
+            <div id="snake-score">
+              Score: 0    Level: 1
+            </div>
+            <div id="snake-restart"></div>
+            <canvas id="canvas1" width="480" height="360">
+              Unfortunately your browser does not support the Canvas element
+            </canvas>
+            <div>
+              <button id="snake-button">Play</button>
+              <p>Controls:</p>
+              <p>Snake Movement: W = Up | S = Down | A = Left | D = Right</p>
+            </div>
+          </div>
+        <!-- end of snake project markup -->
+      </div>
+
+      <!-- end of Portfolio page markup -->
+
+      <!-- Contact page markup -->
+      <div class="section">
+        <div class="contact-container">
+          <div class="contact-left" id="contact-map">
+          </div>
+          <div class="contact-about">
+            <img src="/images/profile-pic.jpg" class="my-pic">
+            <h1 class="about-headline">About Me</h1>
+            <hr class="about-hr"/>
+            <p>My name's Michael. I'm relocating from the UK to Canada in February 2018, and searching for my next challenge.</p>
+            <p>I'm interested in all things JavaScript, APIs, mobile-first design, and creating lightweight, reusable code. My passion is front-end, but I'm a capable developer across the full stack. I'm constantly searching for new solutions to old problems, and looking for methods and frameworks to help me succeed.</p>
+            <p>When I'm not programming, I'm trying to play anything other than the same four chords I always play on my guitar, or training for the next football season (or soccer, as it'll be over the pond).</p>
+            <h4 class="about">Interested in working with me?</h4>
+            <p>If you think I'd be a good fit for a project or role that you know, or just fancy a game of pick-up soccer and a beer when I land in Toronto, send me a message - I'd love to hear from you!</p>
+          </div>
+          <div class="contact-right">
+            <div class="form-container">
+              <h3><i class="fa fa-comment-o" aria-hidden="true"></i> Message Me</h3>
+              <h4>Got an interesting project? Let me know!</h4>
+              <form id="contact-form" action="https://formspree.io/mail@mjrodge.me" method="POST">
+                <fieldset>
+                  <input type="hidden" name="_subject" value="Enquiry at mjrodge.me" />
+                </fieldset>
+                <fieldset>
+                  <input type="text" name="name" placeholder="Your name" required>
+                </fieldset>
+                <fieldset>
+                  <input type="email" name="_replyto" placeholder="Your email" required>
+                </fieldset>
+                <fieldset>
+                  <textarea name="message" placeholder="Enter your message to me" required></textarea>
+                </fieldset>
+                <fieldset>
+                  <input type="text" name="_gotcha" style="display:none" />
+                </fieldset>
+                <fieldset>
+                  <input type="submit" value="Send">
+                </fieldset>
+              </form>
+            </div>
+            <a href="https://www.linkedin.com/in/michaeljrodgers/">
+              <i class="fa fa-linkedin-square fa-5x contact-widgets" aria-hidden="true"></i></a>
+            <a href="https://github.com/MjRodge">
+              <i class="fa fa-github-square fa-5x contact-widgets" aria-hidden="true"></i></a>
+            <a href="https://www.freecodecamp.org/mjrodge">
+              <i class="fa fa-free-code-camp fa-5x contact-widgets" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      <!-- end of Contact page markup -->
+      </div>
+    <!-- end of main content section -->
+  </body>
+</html>
+<!--
+<img src="/images/profile-pic.jpg" class="my-pic">
+<div class="widgets-container">
+  <a href="https://www.linkedin.com/in/michaeljrodgers/">
+    <i class="fa fa-linkedin-square fa-5x contact-widgets" aria-hidden="true"></i></a>
+  <a href="https://github.com/MjRodge">
+    <i class="fa fa-github-square fa-5x contact-widgets" aria-hidden="true"></i></a>
+</div>
+-->

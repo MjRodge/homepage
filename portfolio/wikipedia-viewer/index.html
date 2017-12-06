@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FreeCodeCamp: WikiPedia Viewer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <script src="https://use.fontawesome.com/87871c3e18.js"></script>
+    <script src="wikipedia-viewer.js"></script>
+    <link rel="stylesheet" href="wikipedia-viewer.css">
+  </head>
+  <body>
+    <div id="main" class="container-fluid">
+      <div id="search">
+        <p class="secondary">Click for <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank" class="accent">random</a> WikiPedia entry</p>
+        <div id="searchBox">
+          <form id="wikiSearch">
+            <input type="text" id="input" autocomplete="off">
+            <i class="fa fa-search" id="submitButton"></i>
+          </form>
+        </div>
+      </div>
+
+      <div id="results">
+        <!-- JavaScript will populate div with links to articles once search terms have been entered-->
+      </div>
+    </div>
+  </body>
+</html>

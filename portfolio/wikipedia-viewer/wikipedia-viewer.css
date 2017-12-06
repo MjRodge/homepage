@@ -1,0 +1,57 @@
+#wiki-main {
+  width: 80%;
+  height: 100%;
+  padding-top: 30px;
+  text-align: center;
+  background: #455A64;
+  font-family: 'Abel', sans-serif;
+  margin-top: 100px;
+}
+
+#wiki-search {
+  padding: 15px;
+}
+
+input:focus {
+    outline:none;
+}
+#wiki-input {
+  width: 350px;
+  padding: 10px;
+  margin-left: 10px;
+  padding-left: 20px;
+  border: 2px solid #00BCD4;
+  border-radius: 30px;
+  background: #455A64;
+  color: #CFD8DC;
+}
+#wiki-submit-button {
+    position: relative;
+    z-index: 1;
+    left: -35px;
+    color: #00BCD4;
+    cursor: pointer;
+    width: 0;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.wiki-result-item {
+  background: #CFD8DC;
+  box-shadow: 5px 5px 5px #283942;
+  padding: 5px;
+  padding-top: 7px;
+  margin: 8px;
+  color: #212121;
+}
+div.wiki-result-item:hover {
+  border-left: 7px solid #00BCD4;
+}
+.wiki-accent {
+  color: #00BCD4;
+}
+.wiki-secondary {
+  color: #CFD8DC;
+}

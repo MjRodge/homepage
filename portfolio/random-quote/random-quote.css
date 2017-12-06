@@ -1,0 +1,33 @@
+.quote-background {
+  background-image: url("https://source.unsplash.com/random/3840x2160?architecture");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height:100vh;
+  padding-top: 115px;
+  max-width: 100%;
+  background-size: cover;
+}
+
+.quote-primary {
+  min-height: 100px;
+}
+
+.quote-box {
+  max-width: 45%;
+  min-width: 450px;
+  margin-top: 100px;
+  background-color: rgba(0,0,0,0.8);
+  border-radius: 15px;
+  color: white;
+  padding: 12px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.author {
+  font-style: italic;
+}
+
+button:focus {
+  outline:0;
+}

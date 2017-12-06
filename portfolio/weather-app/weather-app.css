@@ -1,0 +1,101 @@
+#weather-map-background {
+  height: 100%;
+  width: 100%;
+  position:absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#weather-container {
+  z-index: 2;
+  min-width: 250px;
+  width: 25%;
+  margin-left: 100px;
+  background-color: rgba(0,0,0,0.8);
+  border-radius: 15px;
+  padding: 12px;
+  color: white;
+  font-family: 'Abel', sans-serif;
+}
+#weather-location {
+  font-size: 200%;
+  font-style: italic;
+}
+#weather-description, #weather-current-temp, #weather-switch, #weather-switch-label, #weather-icon {
+  text-align: center;
+  padding: 0px;
+}
+#weather-icon {
+  font-size: 160%;
+}
+#weather-current-temp {
+  font-size: 300%;
+}
+#weather-description {
+  font-size: 110%;
+  font-style: italic;
+}
+
+/*Toggle switch code from https://www.w3schools.com/howto/howto_css_switch.asp*/
+/* The switch - the box around the slider */
+.weather-switch-label {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+label {
+  margin-bottom: 0;
+}
+/* Hide default HTML checkbox */
+.weather-switch-label input {display:none;}
+
+/* The slider */
+.weather-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.weather-slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+/*input:checked + .slider {
+  background-color: #2196F3;
+}*/
+
+input:focus + .weather-slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .weather-slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.weather-slider.weather-round {
+  border-radius: 34px;
+}
+
+.weather-slider.weather-round:before {
+  border-radius: 50%;
+}
