@@ -27,7 +27,6 @@ input:focus {
 }
 #wiki-submit-button {
     position: relative;
-    z-index: 1;
     left: -35px;
     color: #00BCD4;
     cursor: pointer;
