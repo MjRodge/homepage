@@ -77,4 +77,71 @@ $(document).ready(function() {
 		});
   }
 	contactMap(contactLat, contactLon);
+
+// REDUCE REPEATING CODE CREATE FUNCTION
+	//MODAL OVERLAYS BUTTONS+ACTIONS
+		//quote project modal
+		var quoteModalButton = document.getElementById("quote-modal-button");
+		var quoteModal = document.getElementById("quote-modal");
+		var quoteModalClose = document.getElementsByClassName("project-info-modal-close")[0];
+
+		quoteModalButton.onclick = function() {
+    	quoteModal.style.display = "block";
+		}
+		window.onclick = function(event) {
+    	if (event.target == quoteModal) {
+        quoteModal.style.display = "none";
+    	}
+		}
+		quoteModalClose.onclick = function() {
+    	quoteModal.style.display = "none";
+		}
+		//weather project modal
+		var weatherModalButton = document.getElementById("weather-modal-button");
+		var weatherModal = document.getElementById("weather-modal");
+		var weatherModalClose = document.getElementsByClassName("project-info-modal-close")[1];
+
+		weatherModalButton.onclick = function() {
+			weatherModal.style.display = "block";
+		}
+		window.onclick = function(event) {
+			if (event.target == weatherModal) {
+				weatherModal.style.display = "none";
+			}
+		}
+		weatherModalClose.onclick = function() {
+			weatherModal.style.display = "none";
+		}
+		//wiki project modal
+		var wikiModalButton = document.getElementById("wiki-modal-button");
+		var wikiModal = document.getElementById("wiki-modal");
+		var wikiModalClose = document.getElementsByClassName("project-info-modal-close")[2];
+
+		wikiModalButton.onclick = function() {
+			wikiModal.style.display = "block";
+		}
+		window.onclick = function(event) {
+			if (event.target == wikiModal) {
+				wikiModal.style.display = "none";
+			}
+		}
+		wikiModalClose.onclick = function() {
+			wikiModal.style.display = "none";
+		}
+		//snake project modal
+		var snakeModalButton = document.getElementById("snake-modal-button");
+		var snakeModal = document.getElementById("snake-modal");
+		var snakeModalClose = document.getElementsByClassName("project-info-modal-close")[3];
+
+		snakeModalButton.onclick = function() {
+			snakeModal.style.display = "block";
+		}
+		window.onclick = function(event) {
+			if (event.target == snakeModal) {
+				snakeModal.style.display = "none";
+			}
+		}
+		snakeModalClose.onclick = function() {
+			snakeModal.style.display = "none";
+		}
 });

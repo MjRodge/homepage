@@ -272,3 +272,86 @@ div.footer {
   background-color: black;
 }
 /* end of contact page styling */
+
+
+/* project information modal overlays styling */
+.project-info-heading {
+  color: white;
+  padding: 2px 16px;
+  top: 57px;
+  right: 0;
+  z-index: 1;
+  position: absolute;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.modal-button:hover,
+.modal-button:focus {
+  cursor: pointer;
+}
+
+.project-info-modal {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  /*overflow: auto;*/
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.5);
+  -webkit-animation-name: fadeIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: fadeIn;
+  animation-duration: 0.4s
+}
+
+.project-info-modal-container {
+  background-color: rgba(0,0,0,0.8);
+  position: absolute;
+  top: 57px;
+  right: 0;
+  width: 45%;
+  height: calc(100vh - 57px);
+  z-index: 2;
+  animation-name: slideIn;
+  animation-duration: 0.6s
+}
+
+.project-info-modal-close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.project-info-modal-close:hover,
+.project-info-modal-close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.project-info-modal-header {
+  padding: 2px 16px;
+  background-color: #00CCFF;
+  color: white;
+}
+
+@-webkit-keyframes slideIn {
+  from {right: -45vw; opacity: 0}
+  to {right: 0; opacity: 1}
+}
+@keyframes slideIn {
+  from {right: -45vw; opacity: 0}
+  to {right: 0; opacity: 1}
+}
+@-webkit-keyframes fadeIn {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+@keyframes fadeIn {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+/*  end of project information modal overlays styling */
