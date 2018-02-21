@@ -278,7 +278,7 @@ div.footer {
 .project-info-heading {
   color: white;
   padding: 2px 16px;
-  top: 57px;
+  top: 95px;
   right: 0;
   z-index: 1;
   position: absolute;
@@ -310,13 +310,23 @@ div.footer {
 .project-info-modal-container {
   background-color: rgba(0,0,0,0.8);
   position: absolute;
-  top: 57px;
+  top: 95px;
   right: 0;
-  width: 45%;
-  height: calc(100vh - 57px);
+  width: 100%;
+  height: calc(100vh - 95px);
   z-index: 2;
   animation-name: slideIn;
   animation-duration: 0.6s
+}
+/* Decrease top padding when screen width is greater than 482px */
+@media screen and (min-width: 483px) {
+  .project-info-heading {
+    top: 57px;
+  }
+  .project-info-modal-container {
+    top: 57px;
+    height: calc(100vh - 57px);
+  }
 }
 
 .project-info-modal-content {
@@ -356,11 +366,11 @@ div.footer {
 }
 
 @-webkit-keyframes slideIn {
-  from {right: -45vw; opacity: 0}
+  from {right: -100vw; opacity: 0}
   to {right: 0; opacity: 1}
 }
 @keyframes slideIn {
-  from {right: -45vw; opacity: 0}
+  from {right: -100vw; opacity: 0}
   to {right: 0; opacity: 1}
 }
 @-webkit-keyframes fadeIn {
@@ -370,5 +380,20 @@ div.footer {
 @keyframes fadeIn {
   from {opacity: 0}
   to {opacity: 1}
+}
+
+/* Change width of modal container when screen width is higher than 600px */
+@media screen and (min-width: 600px) {
+  .project-info-modal-container {
+    width: 45%;
+  }
+  @-webkit-keyframes slideIn {
+    from {right: -45vw; opacity: 0}
+    to {right: 0; opacity: 1}
+  }
+  @keyframes slideIn {
+    from {right: -45vw; opacity: 0}
+    to {right: 0; opacity: 1}
+  }
 }
 /*  end of project information modal overlays styling */
