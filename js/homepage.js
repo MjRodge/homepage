@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	$('#fullpage').fullpage({
-    anchors: ['home', /*'about',*/ 'quote', 'weather', 'wiki', 'snake', 'contact'], /* add anchor to be asigned to each created section */
+    anchors: ['home', /*'about',*/ 'weather', 'react-calculator', 'quote', 'wiki', 'snake', 'contact'], /* add anchor to be asigned to each created section */
     //menu: '#navList',
     //navigation: true,
     //navigationPosition: left,
@@ -16,7 +16,7 @@ $(document).ready(function() {
 				$(".nav-active").removeClass("nav-active");
 				$("#portfolio-nav").addClass("nav-active");
 			}
-			if(index == 5 && direction =='down'){
+			if(index == 6 && direction =='down'){
 				$(".nav-active").removeClass("nav-active");
 				$("#contact-nav").addClass("nav-active");
 			}
@@ -24,7 +24,7 @@ $(document).ready(function() {
 				$(".nav-active").removeClass("nav-active");
 				//$("#home-nav").addClass("nav-active"); //do not want name as active
 			}
-			else if(index == 6 && direction == 'up'){
+			else if(index == 7 && direction == 'up'){
 				$(".nav-active").removeClass("nav-active");
 				$("#portfolio-nav").addClass("nav-active");
 			}
@@ -43,7 +43,7 @@ $(document).ready(function() {
 		$("#contact-nav").addClass("nav-active");
 	});
 	$(document).on('click', '#portfolio-nav', function(){
-		$.fn.fullpage.moveTo('quote', 0);
+		$.fn.fullpage.moveTo('weather', 0);
 		$(".nav-active").removeClass("nav-active");
 		$("#portfolio-nav").addClass("nav-active");
 	});
@@ -83,7 +83,7 @@ $(document).ready(function() {
 		//quote project modal
 		var quoteModalButton = document.getElementById("quote-modal-button");
 		var quoteModal = document.getElementById("quote-modal");
-		var quoteModalClose = document.getElementsByClassName("project-info-modal-close")[0];
+		var quoteModalClose = document.getElementsByClassName("project-info-modal-close")[2];
 
 		quoteModalButton.onclick = function() {
     	quoteModal.style.display = "block";
@@ -99,7 +99,7 @@ $(document).ready(function() {
 		//weather project modal
 		var weatherModalButton = document.getElementById("weather-modal-button");
 		var weatherModal = document.getElementById("weather-modal");
-		var weatherModalClose = document.getElementsByClassName("project-info-modal-close")[1];
+		var weatherModalClose = document.getElementsByClassName("project-info-modal-close")[0];
 
 		weatherModalButton.onclick = function() {
 			weatherModal.style.display = "block";
@@ -112,10 +112,26 @@ $(document).ready(function() {
 		weatherModalClose.onclick = function() {
 			weatherModal.style.display = "none";
 		}
+		//react-calculator project modal
+		var calcModalButton = document.getElementById("calc-modal-button");
+		var calcModal = document.getElementById("calc-modal");
+		var calcModalClose = document.getElementsByClassName("project-info-modal-close")[1];
+
+		calcModalButton.onclick = function() {
+			calcModal.style.display = "block";
+		}
+		window.onclick = function(event) {
+			if (event.target == calcModal) {
+				calcModal.style.display = "none";
+			}
+		}
+		calcModalClose.onclick = function() {
+			calcModal.style.display = "none";
+		}
 		//wiki project modal
 		var wikiModalButton = document.getElementById("wiki-modal-button");
 		var wikiModal = document.getElementById("wiki-modal");
-		var wikiModalClose = document.getElementsByClassName("project-info-modal-close")[2];
+		var wikiModalClose = document.getElementsByClassName("project-info-modal-close")[3];
 
 		wikiModalButton.onclick = function() {
 			wikiModal.style.display = "block";
@@ -131,7 +147,7 @@ $(document).ready(function() {
 		//snake project modal
 		var snakeModalButton = document.getElementById("snake-modal-button");
 		var snakeModal = document.getElementById("snake-modal");
-		var snakeModalClose = document.getElementsByClassName("project-info-modal-close")[3];
+		var snakeModalClose = document.getElementsByClassName("project-info-modal-close")[4];
 
 		snakeModalButton.onclick = function() {
 			snakeModal.style.display = "block";

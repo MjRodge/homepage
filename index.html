@@ -31,6 +31,10 @@
       <link rel="stylesheet" href="/portfolio/weather-app/weather-app.css">
     <!-- end of weather project resources -->
 
+    <!-- react-calculator project resources -->
+      <link href="portfolio/react-calculator/static/css/main.68387d52.css" rel="stylesheet">
+    <!-- end of react-calculator project resources -->
+
     <!-- wikipedia viewer project resources -->
       <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
       <link rel="stylesheet" type="text/css" href="/portfolio/wikipedia-viewer/wikipedia-viewer.css">
@@ -96,49 +100,6 @@
 
       <!-- Portfolio page markup -->
       <div class="section">
-        <!-- quote project info modal markup -->
-          <div class="project-info-heading">
-            <h1><i id="quote-modal-button" class="fa fa-info-circle modal-button" aria-hidden="true"></i> Random Quote Machine</h1>
-          </div>
-
-          <div id="quote-modal" class="project-info-modal">
-            <div class="project-info-modal-container">
-              <div class="project-info-modal-header">
-                <span class="project-info-modal-close">&times;</span>
-                <h1>Random Quote Machine</h1>
-              </div>
-              <div class="project-info-modal-content">
-                <p>A project completed as part of the FreeCodeCamp front-end certificate curriculum. In order to complete the challenge, the following must be achieved:</p>
-                  <p><i class="fa fa-check-square fa-2x"></i> I can click a button to show me a new random quote.</p>
-                  <p><i class="fa fa-check-square fa-2x"></i> I can press a button to tweet out a quote.</p>
-                <p>Rather than maintaining my own array of quotes, I used jQuery's getJSON method to pull a quote from <a href="https://quotesondesign.com/" target="_blank">Quotes on Design's</a> API each time the button is pressed and to ensure that no page reload was required between clicks. Posting to Twitter functionality has been added to meet project specification.</p>
-                <a href="https://github.com/MjRodge/freecodecamp/tree/master/frontend-dev-certificate/intermediate-front-end-projects/random-quote" target="_blank">
-                  <i class="fa fa-github-square fa-4x" aria-hidden="true" title="View project code on GitHub"></i></a>
-              </div>
-            </div>
-          </div>
-        <!-- end of quote project info modal markup -->
-
-        <!-- quote project markup -->
-          <div class="quote-background container-fluid">
-            <div class="container-fluid quote-box">
-              <div class="row">
-                <div class="col quote-primary">
-                  <p class="quote"></p>
-                </div>
-              </div>
-              <div class="row text-center">
-                <div class="col">
-                  <button id="getQuote" class="btn-lg btn-success fa fa-refresh"></button>
-                  <button id="tweetQuote" class="btn-lg btn-info fa fa-twitter"></button>
-                </div>
-              </div>
-            </div>
-          </div>
-        <!-- end of quote project markup -->
-      </div>
-
-      <div class="section">
         <!-- weather project info modal markup -->
           <div class="project-info-heading">
             <h1><i id="weather-modal-button" class="fa fa-info-circle modal-button" aria-hidden="true"></i> Local Weather Viewer</h1>
@@ -156,8 +117,8 @@
                   <p><i class="fa fa-check-square fa-2x"></i> I can see a different icon or background image (e.g. snowy mountain, hot desert) depending on the weather.</p>
                   <p><i class="fa fa-check-square fa-2x"></i> I can push a button to toggle between Fahrenheit and Celsius.</p>
                 <p>Using HTML5 geolocation I have taken the user's current location and connected to the <a href="https://openweathermap.org" target="_blank">OpenWeatherMap</a> API to retrieve a forecast. The same coordinates have been used to set background image as a Google Map view of the local area. Depending on the forecast, the image and description will adjust themselves to a matching icon.</p>
-                <a href="https://github.com/MjRodge/freecodecamp/tree/master/frontend-dev-certificate/intermediate-front-end-projects/weather-app" target="_blank">
-                  <i class="fa fa-github-square fa-4x" aria-hidden="true" title="View project code on GitHub"></i></a>
+                <p><a href="https://github.com/MjRodge/freecodecamp/tree/master/frontend-dev-certificate/intermediate-front-end-projects/weather-app" target="_blank">
+                  <i class="fa fa-github-square fa-4x" aria-hidden="true" title="View project code on GitHub"></i></a></p>
               </div>
             </div>
           </div>
@@ -182,6 +143,81 @@
         <!-- end of weather project markup -->
       </div>
 
+      <div class="section">
+        <!-- react-calculator project info modal markup -->
+          <div class="project-info-heading">
+            <h1><i id="calc-modal-button" class="fa fa-info-circle modal-button" aria-hidden="true"></i> React Calculator</h1>
+          </div>
+
+          <div id="calc-modal" class="project-info-modal">
+            <div class="project-info-modal-container">
+              <div class="project-info-modal-header">
+                <span class="project-info-modal-close">&times;</span>
+                <h1>React Calculator</h1>
+              </div>
+              <div class="project-info-modal-content">
+                <p>A project completed as part of the FreeCodeCamp front-end certificate curriculum. In order to complete the challenge, the following must be achieved:</p>
+                  <p><i class="fa fa-check-square fa-2x"></i> I can add, subtract, multiply and divide two numbers.</p>
+                  <p><i class="fa fa-check-square fa-2x"></i> I can clear the input field with a clear button.</p>
+                  <p><i class="fa fa-check-square fa-2x"></i> I can keep chaining mathematical operations together until I hit the equal button, and the calculator will tell me the correct output.</p>
+                <p>I have expanded upon the original brief by adding the ability to continue operations after a sum has already been output, and have added validation to prevent the user from entering incorrect values.</p>
+                <p><a href="https://github.com/MjRodge/react-calculator" target="_blank">
+                  <i class="fa fa-github-square fa-4x" aria-hidden="true" title="View project code on GitHub"></i></a></p>
+                <p>Originally this project was completed with vanilla JavaScript, but has been rewritten to use React.js instead. Original project can be viewed <a href="https://mjrodge.me/freecodecamp/frontend-dev-certificate/advanced-front-end-projects/calculator/"  target="_blank">here</a>.</p>
+              </div>
+            </div>
+          </div>
+        <!-- end of react-calculator project info modal markup -->
+
+        <!-- react-calculator project markup -->
+          <div id="calc-root"></div>
+          <script type="text/javascript" src="portfolio/react-calculator/static/js/main.84abe389.js"></script>
+        <!-- end of react-calculator project markup -->
+      </div>
+
+      <div class="section">
+        <!-- quote project info modal markup -->
+          <div class="project-info-heading">
+            <h1><i id="quote-modal-button" class="fa fa-info-circle modal-button" aria-hidden="true"></i> Random Quote Machine</h1>
+          </div>
+
+          <div id="quote-modal" class="project-info-modal">
+            <div class="project-info-modal-container">
+              <div class="project-info-modal-header">
+                <span class="project-info-modal-close">&times;</span>
+                <h1>Random Quote Machine</h1>
+              </div>
+              <div class="project-info-modal-content">
+                <p>A project completed as part of the FreeCodeCamp front-end certificate curriculum. In order to complete the challenge, the following must be achieved:</p>
+                  <p><i class="fa fa-check-square fa-2x"></i> I can click a button to show me a new random quote.</p>
+                  <p><i class="fa fa-check-square fa-2x"></i> I can press a button to tweet out a quote.</p>
+                <p>Rather than maintaining my own array of quotes, I used jQuery's getJSON method to pull a quote from <a href="https://quotesondesign.com/" target="_blank">Quotes on Design's</a> API each time the button is pressed and to ensure that no page reload was required between clicks. Posting to Twitter functionality has been added to meet project specification.</p>
+                <p><a href="https://github.com/MjRodge/freecodecamp/tree/master/frontend-dev-certificate/intermediate-front-end-projects/random-quote" target="_blank">
+                  <i class="fa fa-github-square fa-4x" aria-hidden="true" title="View project code on GitHub"></i></a></p>
+              </div>
+            </div>
+          </div>
+        <!-- end of quote project info modal markup -->
+
+        <!-- quote project markup -->
+          <div class="quote-background container-fluid">
+            <div class="container-fluid quote-box">
+              <div class="row">
+                <div class="col quote-primary">
+                  <p class="quote"></p>
+                </div>
+              </div>
+              <div class="row text-center">
+                <div class="col">
+                  <button id="getQuote" class="btn-lg btn-success fa fa-refresh"></button>
+                  <button id="tweetQuote" class="btn-lg btn-info fa fa-twitter"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- end of quote project markup -->
+      </div>
+
       <div class="section wiki">
         <!-- wikipedia viewer project info modal markup -->
           <div class="project-info-heading">
@@ -199,8 +235,8 @@
                   <p><i class="fa fa-check-square fa-2x"></i> I can search Wikipedia entries in a search box and see the resulting Wikipedia entries.</p>
                   <p><i class="fa fa-check-square fa-2x"></i> I can click a button to see a random Wikipedia entry.</p>
                 <p>When a user enters a search term three relevant entries will be appended to the page using the WikiPedia API.</p>
-                <a href="https://github.com/MjRodge/freecodecamp/tree/master/frontend-dev-certificate/intermediate-front-end-projects/wikipedia-viewer" target="_blank">
-                  <i class="fa fa-github-square fa-4x" aria-hidden="true" title="View project code on GitHub"></i></a>
+                <p><a href="https://github.com/MjRodge/freecodecamp/tree/master/frontend-dev-certificate/intermediate-front-end-projects/wikipedia-viewer" target="_blank">
+                  <i class="fa fa-github-square fa-4x" aria-hidden="true" title="View project code on GitHub"></i></a></p>
               </div>
             </div>
           </div>
@@ -240,8 +276,8 @@
               <div class="project-info-modal-content">
                 <p>A project completed as part of my degree, I recreated the classic Nokia mobile phone game: Snake</p>
                 <p>Using HTML5 canvas, and JavaScript to redraw elements following user input, I was able to create a game that continuously increases in difficulty, with very minimal code.</p>
-                <a href="https://github.com/MjRodge/homepage/tree/master/portfolio/snake" target="_blank">
-                  <i class="fa fa-github-square fa-4x" aria-hidden="true" title="View project code on GitHub"></i></a>
+                <p><a href="https://github.com/MjRodge/homepage/tree/master/portfolio/snake" target="_blank">
+                  <i class="fa fa-github-square fa-4x" aria-hidden="true" title="View project code on GitHub"></i></a></p>
               </div>
             </div>
           </div>
@@ -276,7 +312,7 @@
             <img src="/images/profile-pic.jpg" class="my-pic">
             <h1 class="about-headline">About Me</h1>
             <hr class="about-hr"/>
-            <p>My name's Michael. I'm relocating from the UK to Canada in February 2018, and searching for my next challenge.</p>
+            <p>My name's Michael. I've recently relocated from the UK to Canada in February 2018, and I'm searching for my next challenge.</p>
             <p>I'm interested in all things JavaScript, APIs, mobile-first design, and creating lightweight, reusable code. My passion is front-end, but I'm a capable developer across the full stack. I'm constantly searching for new solutions to old problems, and looking for methods and frameworks to help me succeed.</p>
             <p>When I'm not programming, I'm trying to play anything other than the same four chords I always play on my guitar, or training for the next football season (or soccer, as it'll be over the pond).</p>
             <h4 class="about">Interested in working with me?</h4>
@@ -320,12 +356,3 @@
     <!-- end of main content section -->
   </body>
 </html>
-<!--
-<img src="/images/profile-pic.jpg" class="my-pic">
-<div class="widgets-container">
-  <a href="https://www.linkedin.com/in/michaeljrodgers/">
-    <i class="fa fa-linkedin-square fa-5x contact-widgets" aria-hidden="true"></i></a>
-  <a href="https://github.com/MjRodge">
-    <i class="fa fa-github-square fa-5x contact-widgets" aria-hidden="true"></i></a>
-</div>
--->
